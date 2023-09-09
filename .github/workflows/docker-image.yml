@@ -14,5 +14,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
+    # Copy requirements.txt from the Deploy folder to the root directory
+    - name: Copy requirements.txt
+      run: mv Deploy/requirements.txt requirements.txt
+
     - name: Build the Docker image
       run: docker build . --file Deploy/Dockerfile --tag my-image-name:$(date +%s)
