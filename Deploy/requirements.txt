@@ -1,0 +1,14 @@
+torch 
+torchvision
+cython
+av
+scipy
+ninja
+opencv-python
+matplotlib
+nest_asyncio
+python-multipart
+streamlit 
+streamlit_option_menu
+fastapi 
+uvicorn
