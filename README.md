@@ -1,5 +1,7 @@
 # MaskRCNN-for-Tooth-Dentistry
-
+<div align="center">
+    <img src="https://github.com/Bassem-2000/MaskRCNN-for-Tooth-Dentistry/blob/main/Deploy/images/Screenshot%202023-09-09%20042132.png?raw=true">
+  </div>
 ## Overview
 
 This project utilizes the Mask R-CNN model for tooth instance segmentation, enabling various applications in the field of dentistry. The model can identify tooth numbers and conditions like implants, root canals, or crowns in dental X-ray images. This README provides an overview of the project, its setup, and potential use cases.
