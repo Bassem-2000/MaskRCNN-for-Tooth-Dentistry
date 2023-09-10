@@ -42,7 +42,9 @@ Before running this project, ensure you have the following installed:
 
 3. Install the model from here:
 
+    ```
     https://drive.google.com/file/d/1Ybc0KyJYaYtF5VrlwlvBB8lkZlSZsglx/view?usp=sharing
+    ```
     
 4. Build the Docker container:
 
