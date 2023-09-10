@@ -30,7 +30,9 @@ Before running this project, ensure you have the following installed:
 
 1. Clone the project repository:
 
+    ```
    git clone https://github.com/Bassem-2000/MaskRCNN-for-Tooth-Dentistry
+    ```
 
 2. Navigate to the project directory:
 
