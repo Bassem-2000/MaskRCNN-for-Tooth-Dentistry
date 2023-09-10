@@ -36,19 +36,25 @@ Before running this project, ensure you have the following installed:
 
 2. Navigate to the project directory:
 
+   ```
    cd MaskRCNN-for-Tooth-Dentistry/Deploy
-   
-4. Install the model from here:
+   ```
+
+3. Install the model from here:
 
     https://drive.google.com/file/d/1Ybc0KyJYaYtF5VrlwlvBB8lkZlSZsglx/view?usp=sharing
     
-6. Build the Docker container:
+4. Build the Docker container:
 
+    ```
    docker build -t dentistry-computer-vision .
+    ```
 
-7. Run the Docker container:
+5. Run the Docker container:
 
+    ```
    docker run -p 8000:8000 -p 8501:8501 dentistry-computer-vision
+    ```
 
 
 
