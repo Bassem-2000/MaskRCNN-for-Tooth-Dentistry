@@ -30,7 +30,7 @@ def Prediction(file:UploadFile=File(...)):
     
     cfg = get_cfg()
     cfg.merge_from_file(model_zoo.get_config_file('COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml'))
-    cfg.MODEL.WEIGHTS = 'model_final.pth'
+    cfg.MODEL.WEIGHTS = 'models/model_final.pth'
     cfg.MODEL.ROI_HEADS.NUM_CLASSES = 36
     cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
     cfg.MODEL.DEVICE = 'cpu'
@@ -38,13 +38,12 @@ def Prediction(file:UploadFile=File(...)):
 
     
     out = predictor(image)
-    v = Visualizer(image[:, :, ::-1], metadata={}, scale=50)
+    v = Visualizer(image[:, :, ::-1], metadata={}, scale=1)
     v = v.draw_instance_predictions(out['instances'].to('cpu'))
     out = v.get_image()[:, :, ::-1]
 
-    cv2.imwrite(f"{os.path.join('images', Filename)}", out)
-
-    im = open(f"{os.path.join('images', Filename)}", mode= 'rb')
+    cv2.imwrite(f"{os.path.join('output', Filename)}", out)
+    im = open(f"{os.path.join('output', Filename)}", mode= 'rb')
 
     return StreamingResponse(im, media_type= 'image/jpeg')
 nest_asyncio.apply()
